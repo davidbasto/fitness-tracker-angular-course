@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
@@ -23,12 +23,11 @@
     -webkit-font-smoothing: antialiased;
   }
 
-html body {
+html, body {
   font-family: 'Roboto', sans-serif;
   height: 100%;
 }
 
 body {
   margin: 0;
-  height: 100%;
 }

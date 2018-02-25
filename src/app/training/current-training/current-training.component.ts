@@ -10,7 +10,7 @@ import { MatDialog } from '@angular/material';
 export class CurrentTrainingComponent implements OnInit {
 
   @Output() trainingExit = new EventEmitter<void>();
-  timer: NodeJS.Timer;
+  timer;
   progress = 0;
 
   constructor(private dialog: MatDialog) { }

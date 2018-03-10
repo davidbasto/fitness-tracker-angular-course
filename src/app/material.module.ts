@@ -15,7 +15,12 @@ import { MatButtonModule,
          MatSelectModule,
          MatProgressSpinnerModule,
          MatDialogModule,
-         MatTableModule} from '@angular/material';
+         MatTableModule,
+         MatSortModule,
+         MatPaginatorModule,
+         MatPaginatorIntl} from '@angular/material';
+
+import { MatPaginatorImplPtBr } from './mat-paginator-intl-pt-br';
 
 @NgModule({
   imports: [
@@ -35,7 +40,9 @@ import { MatButtonModule,
     MatSelectModule,
     MatProgressSpinnerModule,
     MatDialogModule,
-    MatTableModule
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule
   ],
   exports: [
     MatButtonModule,
@@ -53,8 +60,13 @@ import { MatButtonModule,
     MatSelectModule,
     MatProgressSpinnerModule,
     MatDialogModule,
-    MatTableModule
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule
   ],
-  declarations: []
+  declarations: [],
+  providers: [
+    {provide: MatPaginatorIntl, useClass: MatPaginatorImplPtBr }
+  ]
 })
 export class MaterialModule { }
